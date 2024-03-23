@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Jerry
+- 👋 Hi, I’m @Jerrygdchld
 - 👀 I’m interested in building a SAAS model to revolutionize small restaurant operators
 - 🌱 I’m currently learning ML for time-series forecasting for nonstationary data
 - 💞️ I’m looking to collaborate on writing code for my SAAS model
