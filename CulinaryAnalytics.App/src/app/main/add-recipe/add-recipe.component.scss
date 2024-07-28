@@ -1,0 +1,200 @@
+
+
+.add-recipe-child {
+    position: absolute;
+    top: 122px;
+    left: 352px;
+    box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+    background-color: #fff;
+    width: 1536px;
+    height: 806px;
+}
+
+.add-recipe-item {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    background-color: #fff;
+    border-right: 1px solid #e4e4e5;
+    box-sizing: border-box;
+    width: 320px;
+    height: 870px;
+}
+
+.add-recipe-inner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    border-bottom: 1px solid #e4e4e5;
+    box-sizing: border-box;
+    width: 1920px;
+    height: 90px;
+}
+
+.add-recipe1 {
+    position: relative;
+    font-weight: 500;
+    color: #ec6518;
+}
+
+.recipes-parent {
+    position: absolute;
+    top: 154px;
+    left: 384px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.alextruben12gmailcom {
+    position: relative;
+    font-size: 16px;
+    color: #807f85;
+}
+
+.alex-t-ruben-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.avatar-image-parent {
+    position: absolute;
+    top: 17px;
+    left: 1603px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.add-new-recipes {
+    margin: 0;
+}
+
+.you-can-spice {
+    width: 216px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: #807f85;
+    display: inline-block;
+}
+
+.add-new-recipes-into-your-menu-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+.add-recipe-wrapper {
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #ec6518;
+    box-sizing: border-box;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #ec6518;
+}
+
+.add-new-recipe {
+    position: absolute;
+    top: 202px;
+    left: 384px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.outline-settings-fine-tunin-parent3 {
+    width: 520px;
+    border-radius: 8px;
+    background-color: #f8f8fa;
+    border: 1px dashed #e4e4e5;
+    box-sizing: border-box;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 24px;
+    gap: 8px;
+}
+
+.ingredients-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.add-recipe-container {
+    width: 240px;
+    border-radius: 8px;
+    background-color: #2f5a76;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.add-recipe {
+    width: 100%;
+    position: relative;
+    background-color: #f8f8fa;
+    height: 960px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 20px;
+    color: #23222a;
+    font-family: 'General Sans';
+}
+
+.enter-name-recipe {
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #f8f8fa;
+    border: 1px solid #e4e4e5;
+    box-sizing: border-box;
+    height: 52px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 24px;
+    width: 100%;
+}
+
+.input-item-price-recipe {
+    flex: 1;
+    border-radius: 8px;
+    background-color: #f8f8fa;
+    border: 1px solid #e4e4e5;
+    box-sizing: border-box;
+    height: 52px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 24px;
+}
