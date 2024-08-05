@@ -1,0 +1,38 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <img class="logo" alt="" src="logo.png" />
+        <div class="app-name">Culinary Analytics</div>
+    </div>
+    <div class="modal-body">
+        <div class="row">            
+            <div>
+                <div class="h6">Please sign in! or <a  href="signup">Sign Up Here!</a></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><img class="form-control" alt="" src="text_signature.png"></span>
+                </div>
+                <input class="form-control" name="email" [(ngModel)]="loginInfo.email" placeholder="Email" />
+            </div> 
+        </div>
+        <div class="row">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><img class="form-control" alt="" src="textfield_key.png"></span>
+                </div>
+                <input class="form-control" name="password" [(ngModel)]="loginInfo.password" placeholder="Password" />
+            </div> 
+        </div>
+        <div class="error" *ngIf="loginFailureMessage != ''">
+            <hr />
+            <p class="text-danger">{{loginFailureMessage}}</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="login(content)" [disabled]="loginInfo.email == '' || loginInfo.password == ''">Login</button>
+    </div>
+</ng-template>
+<button style="visibility: hidden; border: 0;" id="openModelButton" (click)="open(content)" #openModelButton></button>
+

@@ -1,0 +1,26 @@
+div.row {
+    border-bottom: solid 1px silver;
+    height: 4em;
+}
+
+div.row > div.col:first-child {
+    border-right: solid 1px silver;
+}
+
+div.col {
+    vertical-align: middle;
+    height: 4em;
+}
+
+div.userinfo {
+    vertical-align: top;
+}
+
+p {
+    line-height: .5;
+    padding: 0;
+}
+
+.app-name {
+    margin-top: 0.25em;
+}

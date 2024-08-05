@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CulinaryAnalytics.Models", "CulinaryAnalytics.Models\CulinaryAnalytics.Models.shproj", "{E46AFA6B-B15A-4122-B759-D41240046F67}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryAnalytics.Core", "CulinaryAnalytics.Core\CulinaryAnalytics.Core.csproj", "{B10E096D-59DA-4CF5-B586-63996A04B7D7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryAnalytics.Repositories", "CulinaryAnalytics.Repositories\CulinaryAnalytics.Repositories.csproj", "{99DFB588-1F5D-41F3-988F-A6908F454126}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryAnalytics.Services", "CulinaryAnalytics.Services\CulinaryAnalytics.Services.csproj", "{0554ACF4-4AFB-46FE-A5EE-0411145F1559}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CulinaryAnalytics.Commands", "CulinaryAnalytics.Commands\CulinaryAnalytics.Commands.csproj", "{A4456F2B-BAC3-44B2-BCC0-C7014DFB3A7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CulinaryAnalytics.Api", "CulinaryAnalytics.Api\CulinaryAnalytics.Api.csproj", "{14A4DE3D-EFC8-4AD1-AF3D-1CFD11F5512F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B10E096D-59DA-4CF5-B586-63996A04B7D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B10E096D-59DA-4CF5-B586-63996A04B7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B10E096D-59DA-4CF5-B586-63996A04B7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B10E096D-59DA-4CF5-B586-63996A04B7D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99DFB588-1F5D-41F3-988F-A6908F454126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99DFB588-1F5D-41F3-988F-A6908F454126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99DFB588-1F5D-41F3-988F-A6908F454126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99DFB588-1F5D-41F3-988F-A6908F454126}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0554ACF4-4AFB-46FE-A5EE-0411145F1559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0554ACF4-4AFB-46FE-A5EE-0411145F1559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0554ACF4-4AFB-46FE-A5EE-0411145F1559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0554ACF4-4AFB-46FE-A5EE-0411145F1559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4456F2B-BAC3-44B2-BCC0-C7014DFB3A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4456F2B-BAC3-44B2-BCC0-C7014DFB3A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4456F2B-BAC3-44B2-BCC0-C7014DFB3A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4456F2B-BAC3-44B2-BCC0-C7014DFB3A7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14A4DE3D-EFC8-4AD1-AF3D-1CFD11F5512F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14A4DE3D-EFC8-4AD1-AF3D-1CFD11F5512F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14A4DE3D-EFC8-4AD1-AF3D-1CFD11F5512F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14A4DE3D-EFC8-4AD1-AF3D-1CFD11F5512F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E7FE14D-6F4B-40A2-B6EA-F8409C34DB3D}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CulinaryAnalytics.Models\CulinaryAnalytics.Models.projitems*{99dfb588-1f5d-41f3-988f-a6908f454126}*SharedItemsImports = 5
+		CulinaryAnalytics.Models\CulinaryAnalytics.Models.projitems*{e46afa6b-b15a-4122-b759-d41240046f67}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal
