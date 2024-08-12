@@ -20,18 +20,5 @@ namespace CulinaryAnalytics.Core.Implementations
         {
             Messages?.Clear();
         }
-
-        public void ProcessException(Exception exc, object logData, ILogger logger, string methodName, bool forward = false)
-        {
-            Success = false;
-            Messages.Add($"Error in {methodName} call failed.");
-            Messages.Add(exc.Message.ToString());
-            Exceptions?.Add(exc);
-            logger.LogError(exc, "Error logged in {methodName} with data {data}.", methodName, JsonConvert.SerializeObject(logData));
-            if (forward)
-            {
-                throw exc;
-            }
-        }
     }
 }

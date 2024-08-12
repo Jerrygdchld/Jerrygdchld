@@ -87,3 +87,4 @@ C:\repos\CulinaryAnalytics_dev\CulinaryAnalytics\CulinaryAnalytics.Api\obj\Debug
 C:\repos\CulinaryAnalytics_dev\CulinaryAnalytics\CulinaryAnalytics.Api\obj\Debug\net8.0\CulinaryAnalytics.Api.pdb
 C:\repos\CulinaryAnalytics_dev\CulinaryAnalytics\CulinaryAnalytics.Api\obj\Debug\net8.0\CulinaryAnalytics.Api.genruntimeconfig.cache
 C:\repos\CulinaryAnalytics_dev\CulinaryAnalytics\CulinaryAnalytics.Api\obj\Debug\net8.0\ref\CulinaryAnalytics.Api.dll
+C:\repos\CulinaryAnalytics_dev\CulinaryAnalytics\CulinaryAnalytics.Api\bin\Debug\net8.0\Bogus.dll

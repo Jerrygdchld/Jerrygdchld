@@ -9,6 +9,7 @@ namespace CulinaryAnalytics.Services
         {
             collection.AddScoped<IDictionaryListService, DictionaryListService>();
             collection.AddScoped<IDictionaryListItemService, DictionaryListItemService>();
+            collection.AddScoped<IRecipeService, RecipeService>();
             return collection;
         }
     }

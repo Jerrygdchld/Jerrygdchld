@@ -31,8 +31,9 @@ namespace CulinaryAnalytics.Api.EndPoints
             })
             .WithName("GetDictionaryItems");
 
-            group.MapPut("/dictionaries/{id}/items", ([FromServices] IMediator mediator,[FromBody] DictionaryListItem item) =>
+            group.MapPut("/dictionaries/{id}/items", ([FromServices] IMediator mediator, [FromBody] DictionaryListItem item, long id) =>
             {
+                item.Id = id;
                 return mediator.Send(new UpdateDictionaryListItemCommand(item));
             })
             .WithName("UpdateDictionaryItem");

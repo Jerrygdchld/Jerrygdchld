@@ -22,5 +22,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Entities\CRM\Location.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\CRM\Person.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\NamedEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\StoreFront\Recipe.cs" />
   </ItemGroup>
 </Project>

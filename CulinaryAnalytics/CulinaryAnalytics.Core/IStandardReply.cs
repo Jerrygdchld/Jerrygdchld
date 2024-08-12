@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CulinaryAnalytics.Core.Implementations;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace CulinaryAnalytics.Core
 {
@@ -36,19 +38,38 @@ namespace CulinaryAnalytics.Core
         /// <param name="logger">an instance of the currently used log</param>
         /// <param name="methodName">name of method where the error occured</param>
         /// <param name="forward">indicates if exception should be thrown</param>
-        void ProcessException(Exception exc, object logData, ILogger logger, string methodName, bool forward = false);
+        public void ProcessException(Exception exc, object? logData, ILogger logger, string methodName, bool forward = false)
+        {
+            Success = false;
+            Messages.Add($"Error in {methodName} call failed.");
+            Messages.Add(exc.Message.ToString());
+            Exceptions?.Add(exc);
+            logger.LogError(exc, "Error logged in {methodName} with data {data}.", methodName, JsonConvert.SerializeObject(logData));
+            if (forward)
+            {
+                throw exc;
+            }
+        }
         /// <summary>
         /// Clears all messages from reply
         /// </summary>
-        void ClearMessages();
+        public void ClearMessages()
+        {
+            Messages?.Clear();
+        }
         /// <summary>
         /// Clears all exceptions from reply
         /// </summary>
-        void ClearExceptions();
+        public void ClearExceptions()
+        {
+            Exceptions?.Clear();
+        }
 
         public static IStandardReply<T> CreateStandardReply(bool success)
         {
-            return new StandardReply<T> { Success = success };
+            var instance = new StandardReply<T>();
+            instance.Success = success;
+            return (IStandardReply<T>)instance;
         }
     }
 }

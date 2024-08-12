@@ -1,7 +1,9 @@
-﻿namespace CulinaryAnalytics.Commands.GetList
+﻿using System.Reflection;
+
+namespace CulinaryAnalytics.Commands.GetList
 {
-    public record GetDictionaryListItemsCommand(int DictionaryListId) : IRequest<StandardReply<List<DictionaryListItem>>>;
-    internal class GetDictionaryListItemsCommandHandler : IRequestHandler<GetDictionaryListItemsCommand, StandardReply<List<DictionaryListItem>>>
+    public record GetDictionaryListItemsCommand(int DictionaryListId) : IRequest<IStandardReply<List<DictionaryListItem>>>;
+    internal class GetDictionaryListItemsCommandHandler : IRequestHandler<GetDictionaryListItemsCommand, IStandardReply<List<DictionaryListItem>>>
     {
         private readonly IDictionaryListItemService _dictionaryListItemService;
         private readonly ILogger _logger;
@@ -12,9 +14,19 @@
             _logger = logger;
         }
 
-        public Task<StandardReply<List<DictionaryListItem>>> Handle(GetDictionaryListItemsCommand request, CancellationToken cancellationToken)
+        public async Task<IStandardReply<List<DictionaryListItem>>> Handle(GetDictionaryListItemsCommand request, CancellationToken cancellationToken)
         {
-             return _dictionaryListItemService.GetAsync(x => x.DictionaryListId == request.DictionaryListId);
+            var sr = IStandardReply<List<DictionaryListItem>>.CreateStandardReply(true);
+            try
+            {
+                sr.Response = await _dictionaryListItemService.GetAsync(x => x.DictionaryListId == request.DictionaryListId);
+                sr.TotalRecords = await _dictionaryListItemService.GetTotalRecordsAsync();
+            }
+            catch (Exception ex)
+            {
+                sr.ProcessException(ex, null, _logger, MethodBase.GetCurrentMethod()?.Name ?? "", false);
+            }
+            return sr;
         }
     }
 }

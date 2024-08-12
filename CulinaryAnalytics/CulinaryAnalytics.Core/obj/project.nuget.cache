@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "m+8nZ4dSiLE=",
+  "dgSpecHash": "ZPgAmxZNYDE=",
   "success": true,
   "projectFilePath": "C:\\repos\\CulinaryAnalytics_dev\\CulinaryAnalytics\\CulinaryAnalytics.Core\\CulinaryAnalytics.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\will4\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\will4\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\will4\\.nuget\\packages\\bogus\\35.6.0\\bogus.35.6.0.nupkg.sha512",
     "C:\\Users\\will4\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\will4\\.nuget\\packages\\mediatr\\12.3.0\\mediatr.12.3.0.nupkg.sha512",
     "C:\\Users\\will4\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

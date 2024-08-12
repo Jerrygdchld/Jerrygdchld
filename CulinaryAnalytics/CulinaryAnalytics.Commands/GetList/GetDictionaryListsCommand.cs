@@ -1,7 +1,9 @@
-﻿namespace CulinaryAnalytics.Commands.GetList
+﻿using System.Reflection;
+
+namespace CulinaryAnalytics.Commands.GetList
 {
-    public record GetDictionaryListsCommand() : IRequest<StandardReply<List<DictionaryList>>>;
-    internal class GetDictionaryListsCommandHandler : IRequestHandler<GetDictionaryListsCommand, StandardReply<List<DictionaryList>>>
+    public record GetDictionaryListsCommand() : IRequest<IStandardReply<List<DictionaryList>>>;
+    internal class GetDictionaryListsCommandHandler : IRequestHandler<GetDictionaryListsCommand, IStandardReply<List<DictionaryList>>>
     {
         private readonly IDictionaryListService _dictionaryListService;
         private readonly ILogger _logger;
@@ -12,9 +14,19 @@
             _logger = logger;
         }
 
-        public Task<StandardReply<List<DictionaryList>>> Handle(GetDictionaryListsCommand request, CancellationToken cancellationToken)
+        public async Task<IStandardReply<List<DictionaryList>>> Handle(GetDictionaryListsCommand request, CancellationToken cancellationToken)
         {
-             return _dictionaryListService.GetAsync();
+            var sr = IStandardReply<List<DictionaryList>>.CreateStandardReply(true);
+            try
+            {
+                sr.Response = await _dictionaryListService.GetAsync();
+                sr.TotalRecords = await _dictionaryListService.GetTotalRecordsAsync();
+            }
+            catch (Exception ex)
+            {
+                sr.ProcessException(ex, null, _logger, MethodBase.GetCurrentMethod()?.Name ?? "", false);
+            }
+            return sr;
         }
     }
 }

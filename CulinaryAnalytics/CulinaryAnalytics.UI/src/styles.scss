@@ -1,3 +1,4 @@
+@import 'normalize.css/normalize.css';
 @import 'bootstrap/scss/bootstrap';
 
 * {
@@ -38,3 +39,6 @@ div.align-right {
     width: 100%;
     text-align: right;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

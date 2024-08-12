@@ -1,0 +1,44 @@
+.floatingCard {
+    clear: both;
+    display: inline-block;
+    width: 15em;
+    margin: 0.5em;
+    height: 15em;
+    border: solid 1px #ec6518;
+    padding: 1em;
+    position: relative;
+}
+
+img {
+    margin-right: 0.5em;
+}
+
+p {
+    padding: 0.5em;
+}
+
+dt {
+    display: inline-block;
+    width: 10em;
+    text-align: center;
+    margin-right: 0.25em;
+    color: #fff;
+    cursor: pointer;
+    background-color: #2f5a76;
+}
+
+dt.selected {
+    background-color: #ec6518;
+}
+
+dd {
+    display: none;
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+dd.visible {
+    display: inline;
+}

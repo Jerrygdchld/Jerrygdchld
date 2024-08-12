@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CulinaryAnalytics.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a3db7490d983be5aa6b6cc8fcde837ab8ec00ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e0a7021c23cdd4cbc694b82e23ceae026b98ed4")]
 [assembly: System.Reflection.AssemblyProductAttribute("CulinaryAnalytics.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CulinaryAnalytics.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

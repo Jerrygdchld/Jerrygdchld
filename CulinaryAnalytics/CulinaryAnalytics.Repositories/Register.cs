@@ -1,5 +1,7 @@
 ﻿using CulinaryAnalytics.Core;
 using CulinaryAnalytics.Models.Entities.Common;
+using CulinaryAnalytics.Models.Entities.StoreFront;
+using CulinaryAnalytics.Repositories.Bogus;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -18,6 +20,7 @@ namespace CulinaryAnalytics.Repositories
             });
             collection.AddScoped<IRepository<DictionaryList>, GenericRepository<DictionaryList>>();
             collection.AddScoped<IRepository<DictionaryListItem>, GenericRepository<DictionaryListItem>>();
+            collection.AddScoped<IRepository<Recipe>, BogusRecipeRepository>();
             return collection;
         }
     }

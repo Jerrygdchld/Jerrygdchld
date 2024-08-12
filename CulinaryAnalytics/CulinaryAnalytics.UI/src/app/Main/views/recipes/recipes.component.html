@@ -1,0 +1,30 @@
+<dl>
+    @for (item of recipes; track item.group) {
+        <dt class="p-2 rounded-top" [ngClass]="item.selected ? 'selected' : ''" (click)="itemClicked(item)">{{item.group}} ({{item.total}})</dt>
+        <dd [ngClass]="item.selected ? 'visible' : ''">
+            @for(rec of item.recipes; track rec.id) {
+                <div class="floatingCard rounded">
+                    <label><img [src]='rec.photoData' alt="" />{{rec.name}}</label>
+                    <p>{{rec.description}}</p>
+                </div>
+            }
+        </dd>
+    }
+</dl>
+
+<!-- <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+    @for (item of recipes; track item.group) {
+        <mat-tab label="{{item.group}} ({{item.total}})">
+            @for(rec of item.recipes; track rec.id) {
+                <mat-card class="floatingCard" appearance="outlined">
+                    <mat-card-header>
+                        <mat-card-title><img [src]='rec.photoData' alt="" />{{rec.name}}</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{rec.description}}</p>
+                    </mat-card-content>
+                </mat-card>
+            }
+        </mat-tab>
+      }
+  </mat-tab-group> -->

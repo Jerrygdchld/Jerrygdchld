@@ -3,14 +3,18 @@ using CulinaryAnalytics.Api.EndPoints;
 using CulinaryAnalytics.Commands;
 using CulinaryAnalytics.Models.Auth;
 using CulinaryAnalytics.Repositories;
+using CulinaryAnalytics.Repositories.Bogus;
 using CulinaryAnalytics.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 
 var builder = WebApplication.CreateBuilder(args);
 
 string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddMemoryCache();
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<Program>());
 
@@ -67,5 +71,8 @@ app.MapIdentityApi<ApplicationUser>();
 
 UserEndPoints.Map(app);
 AdminEndPoints.Map(app);
+RecipeEndPoints.Map(app);
+
+app.Services.GetRequiredService<IMemoryCache>().Set("recipes", RecipeFaker.GetAll(100, "abcde"));
 
 app.Run();

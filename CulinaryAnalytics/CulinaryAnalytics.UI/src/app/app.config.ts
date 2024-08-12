@@ -6,6 +6,7 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideNgxWebstorage, withNgxWebstorageConfig, withLocalStorage, withSessionStorage } from 'ngx-webstorage';
 import { addWithCredentialHeaderInterceptor } from './auth/add-with-credential-header.interceptor';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(),
@@ -13,6 +14,6 @@ export const appConfig: ApplicationConfig = {
     provideNgxWebstorage(
       withNgxWebstorageConfig({ separator: ':', caseSensitive: true }),
       withLocalStorage(),
-      withSessionStorage())
+      withSessionStorage()), provideAnimationsAsync()
     ],
 };
