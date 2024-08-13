@@ -4,3 +4,13 @@
 
 /.vs
 /CulinaryAnalytics/.vs/CulinaryAnalytics
+/CulinaryAnalytics/CulinaryAnalytics.Api/bin
+/CulinaryAnalytics/CulinaryAnalytics.Commands/bin
+/CulinaryAnalytics/CulinaryAnalytics.Core/bin
+/CulinaryAnalytics/CulinaryAnalytics.Repositories/bin
+/CulinaryAnalytics/CulinaryAnalytics.Services/bin
+/CulinaryAnalytics/CulinaryAnalytics.Api/obj
+/CulinaryAnalytics/CulinaryAnalytics.Commands/obj
+/CulinaryAnalytics/CulinaryAnalytics.Core/obj
+/CulinaryAnalytics/CulinaryAnalytics.Repositories/obj
+/CulinaryAnalytics/CulinaryAnalytics.Services/obj
